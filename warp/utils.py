@@ -58,7 +58,7 @@ def getNextWeek():
         t = gmtime(ts)
         res.append( {
             "timestamp": ts,
-            "date": strftime("%Y-%m-%d",t),
+            "date": strftime("%d-%m-%Y",t),
             "weekdayN": strftime("%w",t),
             "isWeekend": t.tm_wday>=5
         })
@@ -73,16 +73,16 @@ def getNextWeek():
 def formatTimestamp(ts):
 
     t = gmtime(ts)
-    return strftime("%Y-%m-%d %H:%M",t)
+    return strftime("%d-%m-%Y %H:%M",t)
 
 def formatTimespan(fromTS, toTS):
     fromT = gmtime(fromTS)
     toT = gmtime(toTS)
 
     if (fromT[0],fromT[1],fromT[2]) ==  (toT[0],toT[1],toT[2]):
-        return strftime("%a, %Y-%m-%d %H:%M",fromT)+strftime("-%H:%M",toT)
+        return strftime("%a, %d-%m-%Y %H:%M",fromT)+strftime("-%H:%M",toT)
     else:
-        return strftime("%Y-%m-%d %H:%M",fromT)+strftime(" - %Y-%m-%d %H:%M",toT)
+        return strftime("%d-%m-%Y %H:%M",fromT)+strftime(" - %d-%m-%Y %H:%M",toT)
 
 def validateJSONInput(jsonSchema, isAdmin = False):
 

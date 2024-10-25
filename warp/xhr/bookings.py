@@ -133,7 +133,7 @@ def listW(report = False):      # list is a built-in type
 
             worksheet.write_row(rowNo,0,rowData)
 
-        dateFormat = workbook.add_format({'num_format': 'yyyy-mm-dd hh:mm'})
+        dateFormat = workbook.add_format({'num_format': 'dd-mm-yyyy hh:mm'})
         for colNo, col in enumerate(columnsContent):
             if col[-2:] == "ts":
                 worksheet.set_column(colNo, colNo, None, dateFormat)

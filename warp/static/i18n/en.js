@@ -4,7 +4,7 @@ warpGlobals.i18n = { locale: 'en' }
 warpGlobals.i18n.weekdaysShort = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ];
 
 warpGlobals.i18n.datePicker = {
-    firstDay: 0,    //first day of week
+    firstDay: 1,    //first day of week
     i18n_object: {
         cancel:	'Cancel',
         clear: 'Clear',
